@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayman Pharmacy | Hurghada</title>
+</head>
+<body>
+  <script src="./jquery-1.9.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./page.css" />
+
+  <script type="text/javascript">
+    // zipper default settings
+    var backcolor = "blue";
+    var backImage = "";
+    var lineColor = "#333333"; // default
+    var toothFill = "#d1d3d4"; // default
+    var pullFill = "#FFFFFF"; // default
+    var CursorFill = "#999999"; // default
+    var endingsFill = "#FFFFFF"; // default
+    var autoOpen = false;
+    var autoOpenSpeed = 100; // from 1 to 1000
+    var noAnimation = false;
+    var fadeOutAnimation = true;
+    var moveOutAnimation = false;
+    var fadeOutDelay = 1700; // milliseconds
+    //var zipperHeight = 1000;
+
+    $(function () {
+      // INITIALIZATION ROUTINE
+      if (backImage != "") {
+        var backObj = new Image();
+        backObj.src = backImage;
+        backObj.onload = function () {
+          init();
+          fillPattern = ctx.createPattern(backObj, "repeat");
+        };
+      } else {
+        init();
+      }
+    });
+  </script>
+
+  <script type="text/javascript" src="./general.js"></script>
+  <script type="text/javascript" src="./timer.js"></script>
+  <script type="text/javascript" src="./zipper.js"></script>
+</head>
+
+<body>
+  <!-- SITE -->
+
+  <div class="site-div">
+    <div class="header">
+      <div class="header-band"></div>
+    </div>
+    <div class="banner">
+      <div class="banner-title">
+        <h1>Merry Christmas | 2021</h1>
+        <br />
+        <h2>Ayman Pharmacy | Hurghada</h2>
+        <br />
+        <h2>Whatsapp: +201226178835</h2>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+
+  <!-- END SITE -->
+
+  <!-- ZIPPER -->
+  <div id="containerZipper">
+    <canvas id="canvasback"></canvas>
+    <canvas id="canvas"></canvas>
+    <canvas id="overlapcanvas"></canvas>
+  </div>
+  <a id="reloadPage" onclick="location.reload();" href="#"
+    ><img src="img/reload.png"
+  /></a>
+</body>
+</html>
